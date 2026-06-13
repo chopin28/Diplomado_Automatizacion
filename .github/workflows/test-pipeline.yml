@@ -36,6 +36,6 @@ jobs:
 
       - name: 5. Ejecutar pruebas Playwright
         run: |
-          cd tests
+          cd ../test
           npm run test
 
