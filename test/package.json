@@ -1,0 +1,25 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "install:browsers:ci": "playwright install --with-deps",
+    "test:ui-polling": "playwright test -g \"TestPlan UI Polling\"",
+    "test:api-pool": "playwright test -g \"TestPlan API\"",
+    "test:distribucion": "playwright test -g \"TestPlan Distribución\"",
+    "report": "playwright show-report",
+    "install:browsers": "playwright install"    
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.3"
+  }
+}
