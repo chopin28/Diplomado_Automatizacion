@@ -1,4 +1,4 @@
-name: Lite Thinking QA TestOps Pipeline
+name: Retos Automatización
 
 on:
   push:
@@ -30,7 +30,7 @@ jobs:
 
       - name: 4. Instalar Dependencias de Pruebas (Playwright)
         run: |
-          cd tests
+          cd ../test
           npm ci
           npm run install:browsers:ci
 
