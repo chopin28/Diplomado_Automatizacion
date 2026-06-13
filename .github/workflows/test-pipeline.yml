@@ -37,7 +37,7 @@ jobs:
       - name: 5. Ejecutar pruebas Playwright
         run: |
           cd ../test
-          npm run test:headless
+          npm run test:headed
 
       - name: 6. Guardar reporte HTML como artifact si falla
         if: failure()
