@@ -8,7 +8,7 @@ on:
 
 jobs:
   run-automation-suite:
-    name: Ejecución de Pruebas
+    name: Ejecución de Pruebas y Reporte
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -37,5 +37,12 @@ jobs:
       - name: 5. Ejecutar pruebas Playwright
         run: |
           cd ../test
-          npm run test
+          npm run test:headless
+
+      - name: 6. Guardar reporte HTML como artifact si falla
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reporte-playwright
+          path: test/playwright-report
 
